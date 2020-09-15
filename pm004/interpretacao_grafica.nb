@@ -1,0 +1,413 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     15078,        404]
+NotebookOptionsPosition[     14222,        373]
+NotebookOutlinePosition[     14602,        389]
+CellTagsIndexPosition[     14559,        386]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"x0", "=", "2"}], ";"}]], "Input",
+ CellChangeTimes->{{3.6156452982915936`*^9, 3.615645301083993*^9}, {
+  3.615645427942741*^9, 3.6156454285043087`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "f", "]"}]], "Input",
+ CellChangeTimes->{{3.615645401517865*^9, 3.6156454027969913`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "M\[EAcute]todo", " ", "de", " ", "Newton", " ", "Para", " ", "encontrar", 
+   " ", "raiz", " ", "de", " ", "2"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.6156514958839035`*^9, 3.6156515020665216`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", "x_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"x", "^", "2"}], "-", "2"}]}]], "Input",
+ CellChangeTimes->{{3.6156453041727934`*^9, 3.6156453087591934`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Newton", "[", 
+   RowBox[{"i_", ",", "x0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", "=", "x0"}], ";", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"j", "=", "1"}], ",", 
+       RowBox[{"j", "\[LessEqual]", "i"}], ",", 
+       RowBox[{"j", "++"}], ",", 
+       RowBox[{
+        RowBox[{"x", "=", 
+         RowBox[{"x", "-", 
+          RowBox[{
+           RowBox[{"f", "[", "x", "]"}], "/", 
+           RowBox[{
+            RowBox[{"f", "'"}], "[", "x", "]"}]}]}]}], ";"}]}], "]"}], ";", 
+     "x"}], "}"}], "[", 
+   RowBox[{"[", "1", "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.615648254581421*^9, 3.615648299884402*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"x1", "=", 
+   RowBox[{"x0", "-", 
+    RowBox[{
+     RowBox[{"f", "[", "x0", "]"}], "/", 
+     RowBox[{
+      RowBox[{"f", "'"}], "[", "x0", "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.615645311880393*^9, 3.615645318853593*^9}, 
+   3.615648435092335*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"g", "=", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"x", "^", "2"}], "-", "2"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "1", ",", "9"}], "}"}], ",", 
+       RowBox[{"AxesOrigin", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "0"}], "}"}]}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"r1", "=", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"f", "[", "it", "]"}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"x", "-", "it"}], ")"}], "*", 
+         RowBox[{
+          RowBox[{"f", "'"}], "[", "it", "]"}]}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "1", ",", "9"}], "}"}], ",", 
+       RowBox[{"AxesOrigin", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "0"}], "}"}]}], ",", 
+       RowBox[{"PlotStyle", "\[Rule]", "Red"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Show", "[", 
+     RowBox[{"g", ",", "r1"}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"it", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+       "10", "\[Rule]", "\"\<\!\(\*SubscriptBox[\(x\), \(0\)]\)\>\""}], ",", 
+       RowBox[{
+        RowBox[{"Newton", "[", 
+         RowBox[{"1", ",", "10"}], "]"}], "\[Rule]", 
+        "\"\<\!\(\*SubscriptBox[\(x\), \(1\)]\)\>\""}], ",", 
+       RowBox[{
+        RowBox[{"Newton", "[", 
+         RowBox[{"2", ",", "10"}], "]"}], "\[Rule]", 
+        "\"\<\!\(\*SubscriptBox[\(x\), \(2\)]\)\>\""}], ",", 
+       RowBox[{
+        RowBox[{"Newton", "[", 
+         RowBox[{"3", ",", "10"}], "]"}], "\[Rule]", 
+        "\"\<\!\(\*SubscriptBox[\(x\), \(3\)]\)\>\""}], ",", 
+       RowBox[{
+        RowBox[{"Newton", "[", 
+         RowBox[{"4", ",", "10"}], "]"}], "\[Rule]", 
+        "\"\<\!\(\*SubscriptBox[\(x\), \(4\)]\)\>\""}], ",", 
+       RowBox[{
+        RowBox[{"Newton", "[", 
+         RowBox[{"5", ",", "10"}], "]"}], "\[Rule]", 
+        "\"\<\!\(\*SubscriptBox[\(x\), \(5\)]\)\>\""}], ",", 
+       RowBox[{
+        RowBox[{"Newton", "[", 
+         RowBox[{"6", ",", "10"}], "]"}], "\[Rule]", 
+        "\"\<\!\(\*SubscriptBox[\(x\), \(6\)]\)\>\""}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"ControlType", "\[Rule]", "Setter"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6156453347499933`*^9, 3.615645425041308*^9}, {
+  3.6156483178870325`*^9, 3.615648478866496*^9}, {3.6156485357448254`*^9, 
+  3.615648568427245*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`it$$ = Rational[
+    52578694120310035927738924801, 37170548253351666881178440160], 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`it$$], {
+      10 -> "\!\(\*SubscriptBox[\(x\), \(0\)]\)", Rational[51, 10] -> 
+       "\!\(\*SubscriptBox[\(x\), \(1\)]\)", Rational[2801, 1020] -> 
+       "\!\(\*SubscriptBox[\(x\), \(2\)]\)", Rational[9926401, 5714040] -> 
+       "\!\(\*SubscriptBox[\(x\), \(3\)]\)", 
+       Rational[163833943056001, 113439704740080] -> 
+       "\!\(\*SubscriptBox[\(x\), \(4\)]\)", 
+       Rational[52578694120310035927738924801, 37170548253351666881178440160] -> 
+       "\!\(\*SubscriptBox[\(x\), \(5\)]\)", 
+       Rational[
+        5527818390306614449943235072008258380260981706536934540801, 
+         3908757773794403526299815890362067987561225395721436816320] -> 
+       "\!\(\*SubscriptBox[\(x\), \(6\)]\)"}}}, Typeset`size$$ = {
+    684., {210., 227.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`it$8452$$ = False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`it$$ = 
+        10 -> "\!\(\*SubscriptBox[\(x\), \(0\)]\)"}, "ControllerVariables" :> {
+        Hold[$CellContext`it$$, $CellContext`it$8452$$, False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`g = 
+        Plot[$CellContext`x^2 - 2, {$CellContext`x, 1, 9}, 
+          AxesOrigin -> {1, 0}]; $CellContext`r1 = 
+        Plot[$CellContext`f[$CellContext`it$$] + ($CellContext`x - \
+$CellContext`it$$) 
+           Derivative[1][$CellContext`f][$CellContext`it$$], {$CellContext`x, 
+           1, 9}, AxesOrigin -> {1, 0}, PlotStyle -> Red]; 
+       Show[$CellContext`g, $CellContext`r1]), 
+      "Specifications" :> {{$CellContext`it$$, {
+         10 -> "\!\(\*SubscriptBox[\(x\), \(0\)]\)", Rational[51, 10] -> 
+          "\!\(\*SubscriptBox[\(x\), \(1\)]\)", Rational[2801, 1020] -> 
+          "\!\(\*SubscriptBox[\(x\), \(2\)]\)", Rational[9926401, 5714040] -> 
+          "\!\(\*SubscriptBox[\(x\), \(3\)]\)", 
+          Rational[163833943056001, 113439704740080] -> 
+          "\!\(\*SubscriptBox[\(x\), \(4\)]\)", 
+          Rational[
+           52578694120310035927738924801, 37170548253351666881178440160] -> 
+          "\!\(\*SubscriptBox[\(x\), \(5\)]\)", 
+          Rational[
+           5527818390306614449943235072008258380260981706536934540801, 
+            3908757773794403526299815890362067987561225395721436816320] -> 
+          "\!\(\*SubscriptBox[\(x\), \(6\)]\)"}}}, 
+      "Options" :> {ControlType -> Setter}, "DefaultOptions" :> {}],
+     ImageSizeCache->{772., {297., 308.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.6156453892563934`*^9, 3.615645432622471*^9}, {
+  3.6156484064035673`*^9, 3.615648479334502*^9}, {3.6156485568050957`*^9, 
+  3.6156485687392488`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Secante", "[", 
+   RowBox[{"i_", ",", "x0_", ",", "x1_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", "=", "x0"}], ";", 
+     RowBox[{"y", "=", "x1"}], ";", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"j", "=", "1"}], ",", 
+       RowBox[{"j", "\[LessEqual]", "i"}], ",", 
+       RowBox[{"j", "++"}], ",", 
+       RowBox[{
+        RowBox[{"x", "=", 
+         RowBox[{"y", "-", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"x", "-", "y"}], ")"}], "*", 
+           RowBox[{
+            RowBox[{"f", "[", "y", "]"}], "/", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"f", "[", "x", "]"}], "-", 
+              RowBox[{"f", "[", "y", "]"}]}], ")"}]}]}]}]}], ";"}]}], "]"}], 
+     ";", "x"}], "}"}], "[", 
+   RowBox[{"[", "1", "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.615645374826393*^9, 3.615645387821193*^9}, {
+  3.615649008913969*^9, 3.615649087352272*^9}, {3.615650049892479*^9, 
+  3.6156500767717953`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "M\[EAcute]todo", " ", "da", " ", "Secante", " ", "para", " ", "encontrar", 
+   " ", "raiz", " ", "de", " ", "2"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.615645442309512*^9, 3.6156454423407097`*^9}, {
+  3.615651505825897*^9, 3.6156515141377287`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"g", "=", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"x", "^", "2"}], "-", "2"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "0", ",", "9"}], "}"}], ",", 
+       RowBox[{"AxesOrigin", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "0"}], "}"}]}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"it0", "=", 
+     RowBox[{"Secante", "[", 
+      RowBox[{"iter", ",", "9", ",", "10"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"it", "=", 
+     RowBox[{"Secante", "[", 
+      RowBox[{
+       RowBox[{"iter", "-", "1"}], ",", "9", ",", "10"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"r1", "=", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"f", "[", "it0", "]"}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"x", "-", "it0"}], ")"}], "*", 
+         FractionBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"f", "[", "it", "]"}], "-", 
+            RowBox[{"f", "[", "it0", "]"}]}], ")"}], 
+          RowBox[{"it", "-", "it0"}]]}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "0", ",", "9"}], "}"}], ",", 
+       RowBox[{"AxesOrigin", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "0"}], "}"}]}], ",", 
+       RowBox[{"PlotStyle", "\[Rule]", "Red"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Show", "[", 
+     RowBox[{"g", ",", "r1"}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"iter", ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7"}], 
+      "}"}]}], "}"}], ",", 
+   RowBox[{"ControlType", "\[Rule]", "Setter"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.615649483595951*^9, 3.6156495102958946`*^9}, {
+  3.615649592887059*^9, 3.6156496677411776`*^9}, {3.6156497081163063`*^9, 
+  3.6156497179292727`*^9}, {3.6156497898968787`*^9, 3.6156499953216295`*^9}, {
+  3.615650100250123*^9, 3.6156501065682044`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`iter$$ = 7, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`iter$$], {1, 2, 3, 4, 5, 6, 7}}}, Typeset`size$$ = {
+    684., {211., 227.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`iter$479344$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`iter$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`iter$$, $CellContext`iter$479344$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`g = 
+        Plot[$CellContext`x^2 - 2, {$CellContext`x, 0, 9}, 
+          AxesOrigin -> {1, 
+           0}]; $CellContext`it0 = $CellContext`Secante[$CellContext`iter$$, 
+          9, 10]; $CellContext`it = $CellContext`Secante[$CellContext`iter$$ - 
+          1, 9, 10]; $CellContext`r1 = 
+        Plot[$CellContext`f[$CellContext`it0] + ($CellContext`x - \
+$CellContext`it0) (($CellContext`f[$CellContext`it] - \
+$CellContext`f[$CellContext`it0])/($CellContext`it - $CellContext`it0)), \
+{$CellContext`x, 0, 9}, AxesOrigin -> {1, 0}, PlotStyle -> Red]; 
+       Show[$CellContext`g, $CellContext`r1]), 
+      "Specifications" :> {{$CellContext`iter$$, {1, 2, 3, 4, 5, 6, 7}}}, 
+      "Options" :> {ControlType -> Setter}, "DefaultOptions" :> {}],
+     ImageSizeCache->{772., {298., 309.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.615650077926218*^9, 3.615650107176612*^9}}]
+}, Open  ]],
+
+Cell[BoxData[" "], "Input",
+ CellChangeTimes->{3.615649671735008*^9}],
+
+Cell[BoxData["Or"], "Input",
+ CellChangeTimes->{{3.6156502179068317`*^9, 3.615650218094034*^9}}]
+},
+WindowSize->{1344, 633},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification->1.9000002145767212`,
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 187, 4, 57, "Input"],
+Cell[747, 26, 126, 2, 57, "Input"],
+Cell[876, 30, 245, 5, 57, "Input"],
+Cell[1124, 37, 196, 5, 57, "Input"],
+Cell[1323, 44, 706, 22, 57, "Input"],
+Cell[2032, 68, 296, 9, 57, "Input"],
+Cell[CellGroupData[{
+Cell[2353, 81, 2480, 67, 280, "Input"],
+Cell[4836, 150, 3590, 68, 635, "Output"]
+}, Open  ]],
+Cell[8441, 221, 1036, 30, 95, "Input"],
+Cell[9480, 253, 295, 6, 57, InheritFromParent],
+Cell[CellGroupData[{
+Cell[9800, 263, 2048, 57, 324, "Input"],
+Cell[11851, 322, 2184, 42, 637, "Output"]
+}, Open  ]],
+Cell[14050, 367, 69, 1, 57, "Input"],
+Cell[14122, 370, 96, 1, 57, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,238 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      6928,        229]
+NotebookOptionsPosition[      5660,        184]
+NotebookOutlinePosition[      6215,        203]
+CellTagsIndexPosition[      6172,        200]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["/************************/\n/*Epsilon da \
+M\[AAcute]quina*/\n/************************/", "Subsection"]], "Subsubtitle",
+ CellChangeTimes->{{3.6155600807903433`*^9, 3.615560103112369*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"e", "=", "1.0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"While", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"1.0", "+", "e"}], ">", "1.0"}], ",", 
+   RowBox[{
+    RowBox[{"e", "=", 
+     RowBox[{"e", "/", "2.0"}]}], ";"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.6155559870977216`*^9, 3.6155560003714123`*^9}, {
+   3.6155560485725756`*^9, 3.615556056593074*^9}, {3.6155561259477158`*^9, 
+   3.615556151525758*^9}, {3.615556213868148*^9, 3.6155562504333973`*^9}, 
+   3.6155563290931993`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"e", "+", "1"}], ">", "1"}]], "Input",
+ CellChangeTimes->{{3.6155562973231363`*^9, 3.615556299010042*^9}}],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{3.615556299353671*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.615574412399138*^9, 3.615574415998525*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"2", "*", "e"}], "+", "1"}], ">", "1"}]], "Input",
+ CellChangeTimes->{{3.615556309193956*^9, 3.6155563132706456`*^9}, {
+  3.6155582081101665`*^9, 3.61555820887442*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.615556313567416*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"2", "*", "e"}]], "Input",
+ CellChangeTimes->{{3.6155563179564953`*^9, 3.615556318596895*^9}}],
+
+Cell[BoxData["2.842170943040401`*^-14"], "Output",
+ CellChangeTimes->{3.6155563188936653`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+/************************/
+/*     Calcular E         */
+/************************/\
+\>", "Subsection",
+ CellChangeTimes->{{3.6155601159970603`*^9, 3.6155601399725695`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n", "=", "10"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", "1"}], ",", 
+   RowBox[{"i", "\[LessEqual]", "n"}], ",", 
+   RowBox[{"i", "++"}], ",", 
+   RowBox[{
+    RowBox[{"x", "=", 
+     RowBox[{"x", "+", 
+      RowBox[{"1.0", "/", 
+       RowBox[{"i", "!"}]}]}]}], ";"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.615558631041403*^9, 3.6155586934413986`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Abs", "[", 
+   RowBox[{"x", "-", "E"}], "]"}], "/", "E"}]], "Input",
+ CellChangeTimes->{{3.615558688622204*^9, 3.6155587047017827`*^9}}],
+
+Cell[BoxData["1.0047766310211053`*^-8"], "Output",
+ CellChangeTimes->{{3.6155586889497223`*^9, 3.6155587051072817`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "Calculando", " ", "como", " ", "uma", " ", "fun\[CCedilla]\[ATilde]o", " ",
+    "de", " ", "n"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.615560200636692*^9, 3.6155602167815533`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", "n_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", "=", "1"}], ";", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", "=", "1"}], ",", 
+       RowBox[{"i", "\[LessEqual]", "n"}], ",", 
+       RowBox[{"i", "++"}], ",", 
+       RowBox[{
+        RowBox[{"x", "=", 
+         RowBox[{"x", "+", 
+          RowBox[{"1.0", "/", 
+           RowBox[{"i", "!"}]}]}]}], ";"}]}], "]"}], ";", "x"}], "}"}], "[", 
+   RowBox[{"[", "1", "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6155592145430083`*^9, 3.6155592692430897`*^9}, {
+  3.6155593163940306`*^9, 3.615559317283082*^9}}],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"Desafio", ":", " ", 
+      RowBox[{
+      "Fa\[CCedilla]a", " ", "uma", " ", "fun\[CCedilla]\[ATilde]o", " ", 
+       RowBox[{"g", "[", "p", "]"}]}]}], ",", " ", 
+     RowBox[{
+     "que", " ", "recebe", " ", "uma", " ", "precis\[ATilde]o", " ", "p", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"exemplo", " ", "p"}], " ", "=", " ", 
+         RowBox[{"10", "^", 
+          RowBox[{"(", 
+           RowBox[{"-", "5"}], ")"}]}]}], ",", " ", 
+        RowBox[{
+        "e", " ", "devolve", " ", "E", " ", "com", " ", "erro", " ", "menor", 
+         " ", "que", " ", "p"}]}]}]}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Desafio", " ", 
+     RowBox[{"Te\[OAcute]rico", ":", " ", 
+      RowBox[{
+      "Justifique", " ", "o", " ", "fato", " ", "e", " ", "a", " ", "segunda",
+        " ", "f\[OAcute]rmula", " ", "para", " ", "o", " ", "arco", " ", 
+       "tangente", " ", "convergir", " ", "BEM", " ", "mais", " ", 
+       "r\[AAcute]pido"}]}]}], "*)"}]}], "Subsubsection"]], "Input",
+ CellChangeTimes->{{3.6155602353130465`*^9, 3.6155602856039*^9}, {
+  3.615560783986929*^9, 3.615560797153751*^9}, {3.615574442515129*^9, 
+  3.615574471453338*^9}}]
+}, Open  ]],
+
+Cell["", "Subsection",
+ CellChangeTimes->{{3.6155601513909645`*^9, 3.615560159408799*^9}, {
+  3.615560222615542*^9, 3.615560228246745*^9}}]
+}, Open  ]]
+},
+WindowSize->{1352, 641},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Default.nb"]]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (64-bit) (January 25, 2013)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 213, 2, 99, "Subsubtitle"],
+Cell[795, 26, 554, 14, 72, "Input"],
+Cell[CellGroupData[{
+Cell[1374, 44, 140, 3, 31, "Input"],
+Cell[1517, 49, 74, 1, 31, "Output"]
+}, Open  ]],
+Cell[1606, 53, 92, 1, 31, "Input"],
+Cell[CellGroupData[{
+Cell[1723, 58, 214, 5, 31, "Input"],
+Cell[1940, 65, 73, 1, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2050, 71, 117, 2, 31, "Input"],
+Cell[2170, 75, 94, 1, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2301, 81, 182, 5, 109, "Subsection"],
+Cell[2486, 88, 507, 15, 72, "Input"],
+Cell[CellGroupData[{
+Cell[3018, 107, 171, 4, 31, "Input"],
+Cell[3192, 113, 120, 1, 31, "Output"]
+}, Open  ]],
+Cell[3327, 117, 227, 5, 31, "Input"],
+Cell[3557, 124, 650, 19, 31, "Input"],
+Cell[4210, 145, 1280, 31, 77, "Input"]
+}, Open  ]],
+Cell[5505, 179, 139, 2, 49, "Subsection"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
