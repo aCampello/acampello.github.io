@@ -278,6 +278,28 @@
 			</article>
 
 		<!-- Scripts -->
+		<script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js"></script>
+		<script>
+    var config = {
+        apiKey: 'ed73684408a87fac3f3049091a064530357e7c45',
+        product: 'COMMUNITY',
+        optionalCookies: [
+            {
+                    name: 'analytics',
+                    label: 'Analytics',
+                    description: '',
+                    cookies: [],
+                    onAccept : function(){},
+                    onRevoke: function(){}
+                }
+        ],
+
+        position: 'RIGHT',
+        theme: 'DARK'
+    };
+
+    CookieControl.load( config );
+</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
