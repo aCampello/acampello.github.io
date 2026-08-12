@@ -11,6 +11,13 @@ const work = [
     href: "https://academic.oup.com/jamiaopen/article/9/3/ooag078/8709993",
   },
   {
+    title: "Therapeutic Sequencing Extraction for Oncology",
+    tag: "NLP · Live in production",
+    description:
+      "Built and deployed a live model that extracts therapeutic sequencing relationships (e.g. Drug A precedes Drug B) from oncology academic papers, powering discovery inside Dimensions.",
+    href: "https://inside.dimensions.ai",
+  },
+  {
     title: "WellcomeML",
     tag: "NLP · Open source",
     description:
@@ -25,14 +32,14 @@ const work = [
     href: "https://medium.com/wellcome-data/open-source-machine-learning-models-for-medical-subject-headings-a82f88f18395",
   },
   {
-    title: "Scrubadub",
+    title: "Anonymisation using AI",
     tag: "NLP · Privacy",
     description:
       "Open-source library to detect and pseudo-anonymise personally identifiable information in free text.",
     href: "https://github.com/LeapBeyond/scrubadub",
   },
   {
-    title: "CLEFCoral",
+    title: "Coral Reef Identification using AI",
     tag: "Computer vision",
     description:
       "Co-organiser of an annual computer-vision competition for automatic coral reef identification, now in its third-plus edition.",
@@ -53,6 +60,13 @@ const work = [
     description:
       "Co-authored a report assessing the data maturity of charities partnering with DataKind UK, shaping how the network prioritises pro-bono support.",
     href: "https://datakind.org.uk/journey-impact-2020/",
+  },
+  {
+    title: "State of Philanthropy Tech Survey",
+    tag: "Advisory",
+    description:
+      "Served on the advisory committee for TAG's 2024 State of Philanthropy Tech Survey, shaping its coverage of sector-wide tech and AI adoption trends.",
+    href: "https://www.tagtech.org/report/2024-state-of-philanthropy-tech-survey/",
   },
 ];
 
