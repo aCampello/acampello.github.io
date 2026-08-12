@@ -1,14 +1,21 @@
 import { ArrowUpRight } from "lucide-react";
 import { talks, writing } from "@/lib/content";
+import panelPhoto from "@/assets/talk_3.jpg";
 
 export default function TalksWriting() {
   return (
-    <section id="talks" className="py-20 md:py-28">
+    <section id="talks" className="border-t border-border py-16 md:py-20">
       <div className="container">
-        <span className="section-label">Communicating data science</span>
-        <h2 className="mt-3 text-3xl font-bold md:text-4xl">Talks &amp; writing</h2>
+        <p className="kicker">Communicating data science</p>
+        <h2 className="mt-3 font-heading text-3xl font-semibold md:text-4xl">Talks &amp; writing</h2>
 
-        <div className="mt-12 grid gap-12 md:grid-cols-2">
+        <img
+          src={panelPhoto}
+          alt="Antonio Campello speaking on a conference panel"
+          className="mt-8 h-64 w-full border border-border object-cover md:h-80"
+        />
+
+        <div className="mt-10 grid gap-12 md:grid-cols-2">
           <div>
             <h3 className="mb-5 font-heading text-lg font-semibold">Talks &amp; panels</h3>
             <ul className="flex flex-col gap-4">

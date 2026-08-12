@@ -4,12 +4,12 @@ import { socials } from "@/lib/content";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 md:py-28">
+    <section id="contact" className="border-t border-border py-16 md:py-20">
       <div className="container">
         <div className="grid gap-12 md:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <span className="section-label">Get in touch</span>
-            <h2 className="mt-3 text-3xl font-bold md:text-4xl">Have a project in mind?</h2>
+            <p className="kicker">Get in touch</p>
+            <h2 className="mt-3 font-heading text-3xl font-semibold md:text-4xl">Have a project in mind?</h2>
             <p className="mt-4 text-muted-foreground">
               I take on a limited number of contract engagements outside my full-time role —
               ML/AI engineering, fractional advisory, or speaking. Tell me what you're working on
@@ -47,7 +47,7 @@ export default function Contact() {
           <form
             action="https://formspree.io/f/maylzywq"
             method="POST"
-            className="flex flex-col gap-4 rounded-xl border border-border bg-card p-6 shadow-sm md:p-8"
+            className="flex flex-col gap-4 border border-border bg-card p-6 shadow-sm md:p-8"
           >
             <div className="grid gap-4 sm:grid-cols-2">
               <input

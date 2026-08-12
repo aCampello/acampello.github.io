@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,29 +6,31 @@
 
 @layer base {
   :root {
-    --background: 40 33% 98%;
-    --foreground: 222 30% 12%;
+    /* Palette lifted from the old acampello.github.io (Miniport) stylesheet:
+       #003f5c navy nav/footer, #008bcc link blue, #43bff0 hover blue. */
+    --background: 205 25% 97%;
+    --foreground: 205 35% 9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 30% 12%;
+    --card-foreground: 205 35% 9%;
 
-    --primary: 222 47% 18%;
-    --primary-foreground: 40 33% 98%;
+    --primary: 199 100% 18%;
+    --primary-foreground: 205 30% 97%;
 
-    --secondary: 180 35% 27%;
-    --secondary-foreground: 40 33% 98%;
+    --secondary: 199 50% 41%;
+    --secondary-foreground: 205 30% 97%;
 
-    --muted: 40 20% 93%;
-    --muted-foreground: 222 15% 40%;
+    --muted: 205 20% 93%;
+    --muted-foreground: 205 12% 40%;
 
-    --accent: 38 92% 50%;
-    --accent-foreground: 222 47% 12%;
+    --accent: 199 100% 40%;
+    --accent-foreground: 0 0% 100%;
 
-    --border: 222 15% 88%;
-    --input: 222 15% 88%;
-    --ring: 38 92% 50%;
+    --border: 205 15% 87%;
+    --input: 205 15% 87%;
+    --ring: 199 100% 40%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
   }
 }
 
@@ -50,6 +52,7 @@
   h3,
   h4 {
     @apply font-heading;
+    font-optical-sizing: auto;
   }
 }
 
@@ -63,10 +66,14 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-secondary;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-accent/70;
   }
 
-  .section-label {
-    @apply text-sm font-semibold uppercase tracking-widest text-accent;
+  .kicker {
+    @apply font-mono text-xs font-semibold uppercase tracking-[0.15em] text-accent;
+  }
+
+  .index-number {
+    @apply font-heading text-4xl font-normal italic text-primary/15;
   }
 }

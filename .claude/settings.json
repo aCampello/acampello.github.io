@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm -v)",
+      "Bash(npm run *)",
+      "Bash(lsof -ti:5173 -sTCP:LISTEN)",
+      "Bash(xargs -r kill)",
+      "Bash(nohup npm run dev)",
+      "Bash(disown)",
+      "Bash(timeout 30 bash -c 'until curl -sf http://localhost:5173 >/dev/null; do sleep 1; done')",
+      "Read(//tmp/**)",
+      "Bash(curl -sf http://localhost:5173)",
+      "Bash(break)",
+      "Read(//private/tmp/**)",
+      "Bash(chromium-cli --help)",
+      "Bash(npx --yes playwright --version)",
+      "Bash(npx --yes playwright install chromium)",
+      "Bash(node --experimental-vm-modules /private/tmp/claude-501/-Users-acampello-Personal-acampello-github-io/d51cef94-b638-4610-9bcd-dee8f0e8fb7e/scratchpad/shot.mjs)",
+      "Bash(npm init *)",
+      "Bash(node shot.mjs)",
+      "Bash(node -e \"console.log\\(require\\('lucide-react/package.json'\\).version\\)\")",
+      "Bash(mkdir -p /private/tmp/claude-501/-Users-acampello-Personal-acampello-github-io/d51cef94-b638-4610-9bcd-dee8f0e8fb7e/scratchpad/shots)",
+      "Bash(nohup npx --yes serve -l 4173 .)",
+      "Bash(curl -sf http://localhost:4173)",
+      "Bash(curl -s http://localhost:4173/)",
+      "Bash(curl -s http://localhost:4173/new/)",
+      "Bash(node shot2.mjs)",
+      "Bash(lsof -ti:4173 -sTCP:LISTEN)",
+      "Bash(node shot3.mjs)",
+      "Bash(node refs.mjs)"
+    ]
+  }
+}

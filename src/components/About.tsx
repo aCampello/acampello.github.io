@@ -1,13 +1,26 @@
 import { CheckCircle2 } from "lucide-react";
 import { credentials, publications } from "@/lib/content";
+import headshot from "@/assets/headshot.jpg";
 
 export default function About() {
   return (
-    <section id="about" className="bg-primary py-20 text-primary-foreground md:py-28">
+    <section id="about" className="bg-primary py-16 text-primary-foreground md:py-20">
       <div className="container grid gap-12 md:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <span className="section-label">About</span>
-          <h2 className="mt-3 text-3xl font-bold md:text-4xl">Background</h2>
+          <div className="flex items-center gap-5">
+            <div className="relative w-20 flex-shrink-0">
+              <img
+                src={headshot}
+                alt="Antonio Campello"
+                className="relative z-10 aspect-square w-full border-2 border-primary-foreground/40 object-cover"
+              />
+              <div className="absolute -bottom-2 -right-2 h-full w-full border-2 border-accent" />
+            </div>
+            <div>
+              <p className="kicker">About</p>
+              <h2 className="mt-1 font-heading text-3xl font-semibold md:text-4xl">Background</h2>
+            </div>
+          </div>
 
           <div className="mt-6 flex flex-col gap-4 text-primary-foreground/85">
             <p>

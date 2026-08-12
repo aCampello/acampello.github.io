@@ -14,7 +14,7 @@ export const services = [
     goodFor: "Good for: teams shipping an ML/NLP feature that need a safe pair of hands end-to-end.",
   },
   {
-    title: "Fractional & Advisory Data Leadership",
+    title: "Advisory & Data Leadership",
     description:
       "Scoping data science strategy, assessing data maturity, and advising mission-driven organisations on where to invest — drawing on experience leading data science work at Wellcome Trust and Digital Science, and chairing DataKind UK's Scoping & Impact Assessment committee.",
     goodFor: "Good for: non-profits and scale-ups that need senior data science judgement without a full-time hire.",
@@ -37,6 +37,11 @@ export type WorkItem = {
 
 export const talks = [
   {
+    title: "Comeback Stronger: Masterclass for Tech Career Returners",
+    venue: "Data Science Festival, 2025",
+    href: "https://www.youtube.com/watch?v=i8uOFdvS2DY/",
+  },
+  {
     title: "Keynote: Data Science for Social Good",
     venue: "PyData London, 2023",
     href: "https://london2023.pydata.org/cfp/talk/USPLMX/",
@@ -48,13 +53,8 @@ export const talks = [
   },
   {
     title: "Panel: Audacious Goals in Philanthropy",
-    venue: "Technology Association of Grantmakers — 350+ attendees",
+    venue: "Technology Association of Grantmakers, 2022 — 350+ attendees",
     href: "https://us06web.zoom.us/rec/play/F6IhRMkaYNSZIOUfQYQyQgWhQDRsSNY8wD49K7cB2S0RCJagrlIW297lJ-2Pznt_gk0I-oKDlo3UVgo.pT0PanHzIWEuzzlh?continueMode=true",
-  },
-  {
-    title: "Digishift 52 — Bias in Data and How to Mitigate It",
-    venue: "Scottish Council of Voluntary Organisations",
-    href: "https://scvo.scot/events/a1v3z00000JZF8WAAX/digishift-52-how-to-avoid-bias-in-data",
   },
   {
     title: "Data Science for Social Good",
@@ -67,14 +67,14 @@ export const talks = [
     href: "https://youtu.be/IEgDpCz4BJI?t=1877",
   },
   {
+    title: "Digishift 52 — Bias in Data and How to Mitigate It",
+    venue: "Scottish Council of Voluntary Organisations",
+    href: "https://scvo.scot/events/a1v3z00000JZF8WAAX/digishift-52-how-to-avoid-bias-in-data",
+  },
+  {
     title: "Teaching: Linear Algebra for Data Scientists",
     venue: "Data Idols Summer Programme",
     href: "https://events.dataidols.com/speakers/antonio-campello/",
-  },
-  {
-    title: "Panel: Comeback Stronger",
-    venue: "Career comebacks & work–life balance after parenthood",
-    href: "https://www.youtube.com/watch?v=i8uOFdvS2DY/",
   },
 ];
 
@@ -95,6 +95,10 @@ export const writing = [
     title: "Navigating UK Tier 2 visa sponsorship for tech jobs (+ searchable sponsor list)",
     href: "https://medium.com/@antoniocampello/looking-for-a-data-science-job-in-the-uk-and-need-tier-2-visa-sponsorship-d7bc986dd155",
   },
+  {
+    title: "Linking Academic Publications to Grants with Machine Learning",
+    href: "https://antoniocampello.medium.com/linking-academic-publications-to-grants-with-machine-learning-304a97a45b99",
+  },
 ];
 
 export const credentials = [
@@ -103,7 +107,7 @@ export const credentials = [
   "Google Cloud Engineer Certification",
   "Fellow, Science to Data Science (S2DS)",
   "AMIMA, Institute of Mathematics & Its Applications",
-  "2022 Emerging Leader, Technology Association of Grantmakers",
+  "Emerging Leader, Technology Association of Grantmakers",
 ];
 
 export const publications = [
