@@ -4,27 +4,21 @@ import panelPhoto from "@/assets/talk_3.jpg";
 import podiumPhoto from "@/assets/talk_4.jpg";
 import audiencePhoto from "@/assets/talk_2.jpg";
 
-const bubbles = [
+const photos = [
   {
     src: audiencePhoto,
     alt: "A packed room at a Data Idols conference talk",
-    size: "h-20 w-20 sm:h-28 sm:w-28 md:h-36 md:w-36 lg:h-40 lg:w-40 xl:h-44 xl:w-44",
     position: "object-[45%_40%]",
-    margin: "",
   },
   {
     src: panelPhoto,
     alt: "Antonio Campello speaking on a conference panel",
-    size: "h-28 w-28 sm:h-40 sm:w-40 md:h-52 md:w-52 lg:h-56 lg:w-56 xl:h-60 xl:w-60",
     position: "object-center",
-    margin: "-ml-6 sm:-ml-10 lg:-ml-12 xl:-ml-14",
   },
   {
     src: podiumPhoto,
     alt: "Antonio Campello giving a keynote from a podium",
-    size: "h-20 w-20 sm:h-28 sm:w-28 md:h-36 md:w-36 lg:h-40 lg:w-40 xl:h-44 xl:w-44",
     position: "object-[65%_45%]",
-    margin: "-ml-6 sm:-ml-10 lg:-ml-12 xl:-ml-14",
   },
 ];
 
@@ -35,14 +29,13 @@ export default function TalksWriting() {
         <p className="kicker">Communicating data science</p>
         <h2 className="mt-3 font-heading text-3xl font-semibold md:text-4xl">Talks &amp; writing</h2>
 
-        <div className="mt-8 flex items-center justify-center">
-          {bubbles.map((bubble, i) => (
+        <div className="mt-8 flex flex-wrap justify-center gap-4 sm:gap-6">
+          {photos.map((photo) => (
             <img
-              key={bubble.alt}
-              src={bubble.src}
-              alt={bubble.alt}
-              className={`${bubble.size} ${bubble.position} ${bubble.margin} rounded-full border-4 border-background object-cover shadow-sm`}
-              style={{ zIndex: i === 1 ? 2 : 1 }}
+              key={photo.alt}
+              src={photo.src}
+              alt={photo.alt}
+              className={`h-28 w-28 sm:h-36 sm:w-36 md:h-44 md:w-44 lg:h-48 lg:w-48 ${photo.position} border border-border object-cover`}
             />
           ))}
         </div>
