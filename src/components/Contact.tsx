@@ -11,8 +11,8 @@ export default function Contact() {
             <p className="kicker">Get in touch</p>
             <h2 className="mt-3 font-heading text-3xl font-semibold md:text-4xl">Have a project in mind?</h2>
             <p className="mt-4 text-muted-foreground">
-              I take on a limited number of contract engagements outside my full-time role —
-              ML/AI engineering, fractional advisory, or speaking. Tell me what you're working on
+              I take on a limited number of engagements outside my full-time role —
+              especially advisory or speaking. Tell me what you're working on
               and I'll get back to you.
             </p>
 

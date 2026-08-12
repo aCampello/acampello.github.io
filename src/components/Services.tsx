@@ -5,7 +5,7 @@ export default function Services() {
     <section id="services" className="border-t border-border py-16 md:py-20">
       <div className="container">
         <div className="flex items-baseline justify-between gap-4">
-          <h2 className="font-heading text-3xl font-semibold md:text-4xl">Ways I can help</h2>
+          <h2 className="font-heading text-3xl font-semibold md:text-4xl">Current and past work</h2>
           <p className="kicker hidden sm:block">01 — 03</p>
         </div>
 
@@ -21,7 +21,7 @@ export default function Services() {
               <h3 className="font-heading text-2xl font-medium leading-snug">{service.title}</h3>
               <div>
                 <p className="text-base leading-relaxed text-foreground/80">{service.description}</p>
-                <p className="mt-3 text-sm font-medium text-secondary">{service.goodFor}</p>
+                {/* <p className="mt-3 text-sm font-medium text-secondary">{service.goodFor}</p> */}
               </div>
             </div>
           ))}
