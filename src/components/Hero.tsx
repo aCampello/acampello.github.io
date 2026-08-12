@@ -29,7 +29,7 @@ export default function Hero() {
               Digital Science
             </a>
             . I am a hands-on data lead taking on engagements in Machine Learning/AI &amp; NLP
-            engineering, advisory data ladership, and technical speaking.
+            engineering, data leadership, and technical speaking.
           </p>
 
           <div className="mt-7 flex flex-wrap gap-4">
