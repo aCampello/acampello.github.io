@@ -75,8 +75,8 @@ export default function Contact() {
                 Type of engagement
               </option>
               <option value="ML/AI engineering">ML/AI &amp; NLP engineering</option>
-              <option value="Advisory / fractional leadership">
-                Advisory / fractional leadership
+              <option value="Advisory / dataleadership">
+                Advisory / data leadership
               </option>
               <option value="Speaking / training">Speaking / training</option>
               <option value="Other">Other</option>
