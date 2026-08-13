@@ -28,7 +28,7 @@ export default function Hero() {
             <a href="https://www.digital-science.com" className="text-foreground underline hover:text-accent">
               Digital Science
             </a>
-            . I am a hands-on data lead taking on engagements in Machine Learning/AI &amp; NLP
+            . I am a hands-on data professional working in Machine Learning/AI &amp; NLP
             engineering, data leadership, and technical speaking.
           </p>
 
