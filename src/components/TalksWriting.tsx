@@ -2,13 +2,13 @@ import { ArrowUpRight } from "lucide-react";
 import { talks, writing } from "@/lib/content";
 import panelPhoto from "@/assets/talk_3.jpg";
 import podiumPhoto from "@/assets/talk_4.jpg";
-import audiencePhoto from "@/assets/talk_2.jpg";
+import keynotePhoto from "@/assets/talk_5.jpg";
 
 const photos = [
   {
-    src: audiencePhoto,
-    alt: "A packed room at a Data Idols conference talk",
-    position: "object-[45%_40%]",
+    src: keynotePhoto,
+    alt: "Antonio Campello presenting at a Data for Good conference talk",
+    position: "object-[38%_35%]",
   },
   {
     src: panelPhoto,

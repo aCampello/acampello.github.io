@@ -59,7 +59,11 @@ export default function About() {
             </p>
           </div>
 
-          <h3 className="mt-10 mb-4 font-heading text-base font-semibold text-primary-foreground/70">
+          <p className="mt-10 text-primary-foreground/85">
+            In my academic life, I published several books and papers in high-calibre journals,
+            like the ones below.
+          </p>
+          <h3 className="mt-4 mb-4 font-heading text-base font-semibold text-primary-foreground/70">
             Publications
           </h3>
           <ul className="flex flex-col gap-2 text-sm">
